@@ -1,0 +1,52 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require_tree 
+ *= require bootstrap-combobox
+ */
+@import "bootstrap";
+
+.form-class{
+	width:550px;
+	text-align:left;
+	font-size:16px;
+	margin:0 auto;
+	padding-left:50px;
+	padding-right:50px;
+}
+.title{
+	text-align:center;
+	font-size:30px;
+}
+
+.combobox-container .add-on{
+	height:34px;
+}
+
+input.form-control.combobox{
+	width:92%;
+}
+span.caret{
+	border-top-width:14px;
+}
+
+span.add-on.btn.dropdown-toggle{
+	width:30px;
+	height:34px;
+}
+
+.btn .caret {
+	margin-left: 0;
+	height: 24px;
+}
+.html{
+	background-color:#eee;
+}

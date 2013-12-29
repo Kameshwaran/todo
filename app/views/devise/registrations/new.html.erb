@@ -1,0 +1,31 @@
+<div class="form-class">
+	<h2 class = "title" >Sign up</h2>
+
+	<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+	  <%= devise_error_messages! %>
+
+	  <div class="form-group"><%= f.label :name %><br />
+	  <%= f.text_field :name, :autofocus => true , class: "form-control" %></div>
+
+	  <div class="form-group"><%= f.label :email %><br />
+	  <%= f.email_field :email, :autofocus => true , class: "form-control" %></div>
+
+	  <div class="form-group"><%= f.label :password %><br />
+	  <%= f.password_field :password , class: "form-control"%></div>
+
+	  <div class="form-group"><%= f.label :password_confirmation %><br />
+	  <%= f.password_field :password_confirmation, class: "form-control" %></div>
+
+	  <div class="form-group"><%= f.label :phone_number %><br />
+	  <%= f.text_field :phone_no, :autofocus => true , class: "form-control" %></div>
+
+	  <div class="form-group" >
+	  	<%= f.label :company %>
+	  	<%= f.collection_select :company_id, @companies, :id, :name, {include_blank: true}, {class: "combobox form-control"} %>
+			<%= link_to 'Not exist?', new_company_path %>
+		</div>
+	  <div class="form-group"><%= f.submit "Sign up" , class: "btn btn-primary" %></div>
+	<% end %>
+
+	<%= render "devise/shared/links" %>
+</div>

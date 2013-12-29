@@ -1,0 +1,28 @@
+<html>
+<body>
+	<div class="form-class" >
+		<input type="hidden" id="company-id" value="<%= current_user.company_id %>" />
+		<div class="form-group">
+			<input class="form-control type-box" placeholder="What needs to be done" />
+		</div>
+	</div>
+	<div class="container">
+		<div class="row">
+			<div class="todos">
+				<% if @categories.any? %>
+					<% for category in @categories %>
+						<div class = "<%= category.name %> category col-xs-4">
+							<center><h3><%= category.name %></h3></center>
+							<table class="table" id="<%= category.name %>" data-category-id = "<%= category.id %>">
+								<% for todo in category.todos %>
+									<tr><td><div id="t-<%= todo.id %>" class="ui-state-default todo"><input type="checkbox" class="check"> <span class="text"><%= todo.name %></span><span class="del">x</span></div></td></tr>
+								<% end %>
+							</table>
+						</div>
+					<% end %>
+				<% end %>
+			</div>
+		</div>
+	</div>
+	</body>
+</html>

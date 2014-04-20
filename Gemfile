@@ -22,7 +22,7 @@ gem 'coffee-rails', '~> 4.0.0'
 gem 'jquery-rails'
 gem 'devise'
 gem 'unicorn'
-gem 'capistrano'
+gem 'capistrano', '~> 2.15'
 gem 'rvm-capistrano'
 gem 'bootstrap-sass'
 group :development do

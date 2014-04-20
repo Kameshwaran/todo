@@ -5,7 +5,7 @@ server "107.170.32.26", :web, :app, :db, primary: true
 
 set :application, "todo"
 set :user, "kamesh"
-set :port, 22
+set :port, 3000
 set :deploy_to, "/home/#{user}/apps/#{application}"
 set :deploy_via, :remote_cache
 set :use_sudo, false

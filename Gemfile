@@ -21,6 +21,9 @@ gem 'coffee-rails', '~> 4.0.0'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 gem 'devise'
+gem 'unicorn'
+gem 'capistrano'
+gem 'rvm-capistrano'
 gem 'bootstrap-sass'
 group :development do
   gem 'rails_layout'

@@ -21,5 +21,8 @@ test:
 production:
   adapter: sqlite3
   database: todo_production
+  username: coatom_prod
+  password: make0r8reak
   pool: 5
+  host: 107.170.32.26
   timeout: 5000

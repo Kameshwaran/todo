@@ -54,7 +54,5 @@ namespace :deploy do
 end
 
 after 'deploy:update_code' do
-  run "cd #{release_path}; cp config/database.yml.example config/database.yml;"
-  # run "cd #{release_path}; RAILS_ENV=production rake assets:precompile"
   run "cd #{release_path}; RAILS_ENV=production rake db:migrate"
 end
